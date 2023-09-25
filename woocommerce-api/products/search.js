@@ -12,7 +12,7 @@ function getDataAndDisplay() {
     $.ajax({
       url: apiUrl,
       type: "GET",
-      credentials: "include",
+      // credentials: "include",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", `Basic ${encodedAuth}`);
       },
@@ -20,10 +20,10 @@ function getDataAndDisplay() {
         allData = data;
         resolve(data); // Resolve the Promise with the data
       },
-      error: function (xhr, textStatus, errorThrown) {
-        console.error("Lỗi khi lấy dữ liệu từ API:", errorThrown);
-        reject(errorThrown); // Reject the Promise with the error
-      },
+      // error: function (xhr, textStatus, errorThrown) {
+      //   console.error("Lỗi khi lấy dữ liệu từ API:", errorThrown);
+      //   reject(errorThrown); // Reject the Promise with the error
+      // },
     });
   });
 }
