@@ -12,6 +12,7 @@ function getDataAndDisplay() {
     $.ajax({
       url: apiUrl,
       type: "GET",
+      credentials: "include",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", `Basic ${encodedAuth}`);
       },
