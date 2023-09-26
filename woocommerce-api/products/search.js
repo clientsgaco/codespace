@@ -10,14 +10,20 @@ function getDataAndDisplay() {
   const apiUrl = "https://sc.gaco.vn/wc-api/v3/products?per_page=100";
 
   return new Promise((resolve, reject) => {
+    $.ajaxSetup({
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    });
+
     $.ajax({
       url: apiUrl,
       type: "GET",
       // credentials: "include",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", `Basic ${encodedAuth}`);
-        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-        xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
+        // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        // xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
       },
       success: function (data) {
         allData = data;
