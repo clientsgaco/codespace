@@ -32,13 +32,13 @@ $(document).ready(() => {
       url: `https://${url}/wp-json/wp/v2/posts?_embed&per_page=${number}`,
       success: function (data) {
         console.log(data);
-
         data.forEach((post) => {
           $("#data").append(`
         <tr>
         <td>${post.id}</td>
         <td><a href="${post.link}" target="_blank">${post.title.rendered}</a></td>
-        <td>${post.date}</td>
+        <td>${post.date}</td>    
+        <td><a href="https://127.0.0.1:5500/wordpress-api/posts?q=${post.slug}" onclick="function()">Xem thêm...</a></td>   
         <td>${post.status}</td>
         </tr>
         `);
