@@ -16,6 +16,8 @@ function getDataAndDisplay() {
       // credentials: "include",
       beforeSend: function (xhr) {
         xhr.setRequestHeader("Authorization", `Basic ${encodedAuth}`);
+        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        xhr.setRequestHeader("Access-Control-Allow-Headers", "*");
       },
       success: function (data) {
         allData = data;
