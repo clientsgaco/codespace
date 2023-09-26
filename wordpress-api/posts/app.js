@@ -38,7 +38,7 @@ $(document).ready(() => {
         <td>${post.id}</td>
         <td><a href="${post.link}" target="_blank">${post.title.rendered}</a></td>
         <td>${post.date}</td>    
-        <td><a href="https://127.0.0.1:5500/wordpress-api/posts?q=${post.slug}" onclick="function()">Xem thêm...</a></td>   
+        <td><a href="https://codespace.gaco.vn/wordpress-api/posts?q=${post.slug}" onclick="function()">Xem thêm...</a></td>   
         <td>${post.status}</td>
         </tr>
         `);
