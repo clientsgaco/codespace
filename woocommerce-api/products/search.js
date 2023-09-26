@@ -6,8 +6,7 @@ function getDataAndDisplay() {
   const password = "cs_9429729612e4774580b1a553833e1d6a3c454ec2";
   const authString = `${username}:${password}`;
   const encodedAuth = btoa(authString);
-  // const apiUrl = "https://sc.gaco.vn/wp-json/wc/v3/products";
-  const apiUrl = "https://sc.gaco.vn/wc-api/v3/products?per_page=100";
+  const apiUrl = "https://sc.gaco.vn/wp-json/wc/v3/products?per_page=100";
 
   return new Promise((resolve, reject) => {
     $.ajaxSetup({
