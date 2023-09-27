@@ -18,11 +18,11 @@ function getBlogPosts(url, number) {
         result += `
         <tr>
         <td>${id}</td>
-        <td><a href="${link}" target="_blank">${title.rendered}</a></td>
+        <td><a href="${link}">${title.rendered}</a></td>
+        <td><a href="/wordpress-api/posts/search/?name=${url}&id=${id}&slug=${slug}" target="_blank">Xem thêm...</a></td>   
+        <td>${status}</td>
         <td>${date}</td>    
-      <td><a href="${url}?id=${id}_&slug=${slug}" onclick="function(queryContent())" target="_blank">Xem thêm...</a></td>   
-      <td>${status}</td>
-      </tr>
+        </tr>
         `;
       });
       $("#data").append(result);

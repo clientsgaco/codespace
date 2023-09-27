@@ -5,7 +5,6 @@ $(document).ready(() => {
     var url = $("#url").val();
     var number = $("#number").val();
     getBlogPosts(url, number);
-    queryContent(url);
   });
 
   $("#number").change((e) => {
@@ -16,8 +15,8 @@ $(document).ready(() => {
 });
 
 // Get Blog content
-$(document).ready(function () {
-  $("#c").click(function () {
-    $("#loadContent").load("js/view.js");
-  });
-});
+// $(document).ready(function () {
+//   $("#c").click(function () {
+//     $("#loadContent").load("js/view.js");
+//   });
+// });
