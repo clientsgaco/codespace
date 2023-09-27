@@ -11,7 +11,7 @@ function loadContentSearch() {
 
   // Search any of its parameters
   const contentID = urlParams.get("id");
-  const contentName = urlParams.get("name");
+  const contentName = urlParams.get("d");
   console.log(contentID, contentName);
 
   // Load content to html

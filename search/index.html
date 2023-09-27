@@ -13,10 +13,15 @@
     />
     <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
-    <div class="container mt-5">
+  <body >
+    <div  class="container mt-5">
       <h1 class="">WordPress Crawlers</h1>
-      <form id="form">
+      
+
+      <!-- /**form
+
+      */ -->
+      <form action="/search/results/" method="GET" id="form">
         <div class="form-group">
           <div class="row">
             <div class="col-4">
@@ -29,7 +34,7 @@
                 </div>
                 <input
                   type="text"
-                  name=""
+                  name="furl"
                   id="url"
                   class="form-control"
                   placeholder="tenmien.com..."
@@ -41,7 +46,7 @@
               <label for="number">Số bài viết:</label>
               <input
                 type="number"
-                name=""
+                name="fnumber"
                 class="form-control"
                 value="20"
                 id="number"
@@ -49,24 +54,28 @@
               />
             </div>
             <div class="col-4">
-              <!-- And this will fetch our data -->
-              <label for="CrawlBtn" style="visibility: hidden">RUN</label>
-
-              <button id="CrawlBtn" class="btn btn-primary btn-block">
-                CHẠY
-              </button>
+              <label for="ajaxFormIS" style="visibility: hidden"
+                >Số bài viết:</label
+              >
+              <input
+                id="ajaxFormIS"
+                class="btn btn-primary btn-block"
+                type="submit"
+                value="Submit"
+              />
             </div>
           </div>
-          <!--  -->
         </div>
         <div class="form-group"></div>
-        <div class="form-group"></div>
       </form>
+      <!-- /**form
+        
+      */ -->
 
-      <div class="" id="result">
-        <table class="table table-bordered">
+      <!-- <div class="" id="result"> -->
+        <!-- <table class="table table-bordered"> -->
           <!-- this will show our spinner -->
-          <div id="spinner"></div>
+          <!-- <div id="spinner"></div>
           <thead class="thead-light">
             <tr>
               <th class="col-7">Tiêu Đề</th>
@@ -78,7 +87,7 @@
             </tr>
           </thead>
           <tbody id="data"></tbody>
-        </table>
+        </table> -->
       </div>
     </div>
   </body>
@@ -94,4 +103,6 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
   ></script>
+
+  
 </html>
