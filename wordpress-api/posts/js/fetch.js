@@ -17,10 +17,9 @@ function getBlogPosts(url, number) {
         const { id, link, title, date, slug, status } = post;
         result += `
         <tr>
-        <td>${id}</td>
-        <td><a href="${link}">${title.rendered}</a></td>
-        <td><a href="/wordpress-api/posts/search/?name=${url}&id=${id}&slug=${slug}" target="_blank">Xem thêm...</a></td>   
-        <td>${status}</td>
+        <td><a href="/wordpress-api/posts/search/?name=${url}&id=${id}&slug=${slug}" target="_blank">${title.rendered}</a></a></td>     
+        <td>${id}</td>    
+        <td><a href="${link}">${slug}</a></td>
         <td>${date}</td>    
         </tr>
         `;

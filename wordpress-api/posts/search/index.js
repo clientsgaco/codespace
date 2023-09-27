@@ -15,7 +15,7 @@ function loadContentSearch() {
   console.log(contentID, contentName);
 
   // Load content to html
-  $("#loadName").append("Load Content từ: ", contentName);
+  $("#loadName").append("Nguồn: ", contentName);
   $("#loadID").append("ID: ", contentID);
 
   // WordPress API Rule

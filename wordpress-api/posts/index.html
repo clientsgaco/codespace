@@ -15,9 +15,9 @@
   </head>
   <body>
     <div class="container mt-5">
-      <h1 class="text-center">WordPress Crawlers</h1>
+      <h1 class="">WordPress Crawlers</h1>
       <form id="form">
-        <div class="form-group container">
+        <div class="form-group">
           <div class="row">
             <div class="col-4">
               <label for="url">Tên Miền Muốn Crawl</label>
@@ -51,6 +51,7 @@
             <div class="col-4">
               <!-- And this will fetch our data -->
               <label for="CrawlBtn" style="visibility: hidden">RUN</label>
+
               <button id="CrawlBtn" class="btn btn-primary btn-block">
                 CHẠY
               </button>
@@ -58,21 +59,22 @@
           </div>
           <!--  -->
         </div>
-        <div class="form-group container"></div>
-        <div class="form-group container"></div>
+        <div class="form-group"></div>
+        <div class="form-group"></div>
       </form>
 
-      <div class="container" id="result">
+      <div class="" id="result">
         <table class="table table-bordered">
           <!-- this will show our spinner -->
           <div id="spinner"></div>
           <thead class="thead-light">
             <tr>
+              <th class="col-7">Tiêu Đề</th>
+
               <th class="col-1">ID</th>
-              <th class="col-3">Tiêu Đề</th>
-              <th class="col-1">Content</th>
-              <th class="col-1">Status</th>
-              <th class="col-1">Ngày Đăng</th>
+              <th class="col-2">URL SLUG</th>
+
+              <th class="col-2">Ngày Đăng</th>
             </tr>
           </thead>
           <tbody id="data"></tbody>
