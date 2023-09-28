@@ -12,11 +12,13 @@ function loadContentSearch() {
   // Search any of its parameters
   const contentID = urlParams.get("id");
   const contentName = urlParams.get("d");
+  const contentSlug = urlParams.get("s");
   console.log(contentID, contentName);
 
   // Load content to html
-  $("#loadName").append("Nguồn: ", contentName);
-  $("#loadID").append("ID: ", contentID);
+  $("#loadSource").append(`
+  Nguồn: <a href="https://${contentName}/${contentSlug}" target="_blank">${contentName}</a> 
+  `);
 
   // WordPress API Rule
   const wpApiPostRule = "/wp-json/wp/v2/posts?include=";
@@ -30,7 +32,7 @@ function loadContentSearch() {
       console.log(data);
       var contentDisplays = "";
       data.forEach((c) => {
-        contentDisplays = `${c.content.rendered}`;
+        contentDisplays = `<h1>${c.title.rendered}</h1><hr></br>${c.content.rendered}`;
       });
       $("#contentDisplay").append(contentDisplays);
       hideSpinner();

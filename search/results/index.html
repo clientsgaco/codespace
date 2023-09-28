@@ -8,13 +8,21 @@
     <link rel="stylesheet" href="/search/css/main.css" />
   </head>
   <body>
+    <header class="d-flex mb-5 bg-dark bg-gradient">
+      <div
+        class="container d-flex align-items-center justify-content-center"
+        style="height: 50px"
+      >
+        <span class="text-light" id="">Kết Quả</span>
+      </div>
+    </header>
     <div class="container mt-5">
       <h1 class="">Kết Quả</h1>
-      <p style="color: #007bff" id="p1"></p>
+      <!-- <p style="color: #007bff" id="p1"></p> -->
       <p style="color: #007bff" id="p2"></p>
 
       <!-- result -->
-      <div class="" id="result">
+      <div class="" id="result" style="min-height: 80vh">
         <table class="table table-bordered">
           <!-- this will show our spinner -->
           <div id="spinner"></div>
@@ -22,7 +30,7 @@
             <tr>
               <th class="col-7">Tiêu Đề</th>
               <th class="col-1">ID</th>
-              <th class="col-2">Nguồn</th>
+              <!-- <th class="col-2">Nguồn</th> -->
               <th class="col-2">Ngày Đăng</th>
             </tr>
           </thead>
@@ -30,6 +38,14 @@
         </table>
       </div>
     </div>
+    <footer class="footer d-flex mt-5 bg-dark bg-gradient">
+      <div
+        class="absolute-footer container d-flex align-items-center justify-content-center"
+        style="height: 50px"
+      >
+        <span class="text-light" id="p1"></span>
+      </div>
+    </footer>
   </body>
 
   <!-- Main JS -->

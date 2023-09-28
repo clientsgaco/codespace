@@ -8,7 +8,18 @@ body {
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
+  background: #f9f9f9;
+}
+
+#main {
+  background: #f9f9f9;
+}
+
+.content {
+  background: #ffffff;
+  width: 900px;
+  margin: 0 auto;
 }
 
 img {

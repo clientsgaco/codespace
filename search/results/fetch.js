@@ -45,7 +45,6 @@ function getBlogPosts(url, number) {
         <tr>
         <td><a href="/search/queries/?d=${url}&id=${id}&s=${slug}">${title.rendered}</a></a></td>     
         <td>${id}</td>    
-        <td><a href="${link}">${slug}</a></td>
         <td>${date}</td>    
         </tr>
         `;
