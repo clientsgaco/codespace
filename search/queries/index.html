@@ -6,12 +6,13 @@
     <title>Search</title>
     <link rel="icon" href="/img/favicon-gaco.png" type="image/x-icon" />
     <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/breadcrumb.css" />
   </head>
   <body>
     <header class="d-flex bg-dark bg-gradient">
       <div
         class="container d-flex align-items-center justify-content-between"
-        style="height: 50px; width: 900px"
+        style="height: 50px"
       >
         <span class="text-light" id="">
           <button type="button" class="btn btn-link" onclick="history.back()">
@@ -41,12 +42,47 @@
         >
       </div>
     </header>
-    <main id="main">
-      <div class="content mt-5 mb-5 p-3">
-        <div id="contentDisplay" class="container" style="min-height: 80vh">
-          <div id="spinner"></div>
-        </div>
-      </div>
+    <!-- breadcrumb -->
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol
+          class="breadcrumb breadcrumb-custom overflow-hidden text-center bg-body-tertiary border rounded-bottom"
+        >
+          <li class="breadcrumb-item">
+            <a
+              class="link-body-emphasis fw-semibold text-decoration-none"
+              href="#"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-house-door-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5Z"
+                />
+              </svg>
+              Tìm Kiếm
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a
+              class="link-body-emphasis fw-semibold text-decoration-none"
+              href="#"
+              >Kết quả</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Slug</li>
+        </ol>
+      </nav>
+    </div>
+    <!-- end breadcrumb -->
+    <main id="main" class="container">
+      <span id="spinner"></span>
+      <div id="contentDisplay"></div>
     </main>
     <footer class="footer d-flex bg-dark bg-gradient">
       <div

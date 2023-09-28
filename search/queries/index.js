@@ -32,7 +32,7 @@ function loadContentSearch() {
       console.log(data);
       var contentDisplays = "";
       data.forEach((c) => {
-        contentDisplays = `<h1>${c.title.rendered}</h1><hr></br>${c.content.rendered}`;
+        contentDisplays = `<div class="content bg-body-tertiary border rounded-3 p-sm-2 p-md-3"><h1>${c.title.rendered}</h1><hr></br>${c.content.rendered}</div>`;
       });
       $("#contentDisplay").append(contentDisplays);
       hideSpinner();

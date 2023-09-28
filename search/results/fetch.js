@@ -14,7 +14,7 @@ const wpUrlApiPluginVersion = "/wp-json/wp/v2/posts?_embed";
 const wpUrlApiPluginFields = "&per_page=";
 // Print resource for user policy
 $("#p1").append("Tìm kiếm trên: ", url);
-$("#p2").append("Số bài viết: ", number);
+$("#p2").append(number, " kết quả");
 /**
  * Get Blog Posts
  */
@@ -32,6 +32,8 @@ function getBlogPosts(url, number) {
     spinner.className = spinner.className.replace("show", "hidden");
   }
   showSpinner();
+  // Put Placeholder before fetching
+  function putPlaceholders() {}
   // Ajax Fetching
   $.ajax({
     method: "GET",
