@@ -1,45 +1,38 @@
-// Spin before fetching
-const spinner = document.getElementById("spinner");
-function showSpinner() {
-  spinner.className = "show";
-  setTimeout(() => {
-    spinner.className = spinner.className.replace("show", "");
-  }, 500);
-}
-function hideSpinner() {
-  spinner.className = spinner.className.replace("show", "hidden");
-}
-
-// Get Data v1
-// $("#form").submit((e) => {
-//   e.preventDefault();
-//   var url = $("#url").val();
-//   var number = $("#number").val();
-//   getBlogPosts(url, number);
-// });
-
-// $("#number").change((e) => {
-//   number = $(this).val();
-// });
+/**
+ * Name: Fetching function
+ * Version: 1.0
+ * Author: GACO.vn
+ * =====================================*/
 
 // Get Data v2 Form URL
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const url = urlParams.get("furl");
 const number = urlParams.get("fnumber");
-
-console.log(url, number);
-$("#p1").append("Tìm kiếm trên: ", url);
-$("#p2").append("Số bài viết: ", number);
-
 // WordPress API
 const wpUrlApiPluginVersion = "/wp-json/wp/v2/posts?_embed";
 const wpUrlApiPluginFields = "&per_page=";
-
-// Fetching data
-
+// Print resource for user policy
+$("#p1").append("Tìm kiếm trên: ", url);
+$("#p2").append("Số bài viết: ", number);
+/**
+ * Get Blog Posts
+ */
+getBlogPosts(url, number);
 function getBlogPosts(url, number) {
+  // Spin before fetching
+  const spinner = document.getElementById("spinner");
+  function showSpinner() {
+    spinner.className = "show";
+    setTimeout(() => {
+      spinner.className = spinner.className.replace("show", "");
+    }, 500);
+  }
+  function hideSpinner() {
+    spinner.className = spinner.className.replace("show", "hidden");
+  }
   showSpinner();
+  // Ajax Fetching
   $.ajax({
     method: "GET",
     url: `https://${url}${wpUrlApiPluginVersion}${wpUrlApiPluginFields}${number}`,
@@ -57,12 +50,13 @@ function getBlogPosts(url, number) {
         </tr>
         `;
       });
+      // Return data
       $("#data").append(result);
+      // Hide Spin
       hideSpinner();
     },
   });
 }
-getBlogPosts(url, number);
 /**
- *
- */
+ * END
+ * =====================================*/
